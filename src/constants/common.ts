@@ -1,0 +1,6 @@
+export const contactUsUrl = 'https://t.me/barcklay_z'
+export const githubUrl = 'https://github.com/r8e-xyz'
+export const xUrl = 'https://x.com/resilience_r8e'
+export const animocaUrl = 'https://www.animocabrands.com/'
+export const iglooUrl = 'https://www.igloo.inc/'
+export const magicEdenUrl = 'https://magiceden.io/'
