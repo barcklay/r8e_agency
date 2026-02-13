@@ -1,0 +1,44 @@
+@mixin font-face($family, $file, $weight, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src:
+      url("/fonts/#{$family}/#{$file}.woff2") format("woff2"),
+      url("/fonts/#{$family}/#{$file}.woff") format("woff"),
+      url("/fonts/#{$family}/#{$file}.ttf") format("truetype"),
+      url("/fonts/#{$family}/#{$file}.otf") format("opentype");
+  }
+}
+
+@mixin geist-font-face($file, $weight, $style: normal) {
+  @include font-face(Geist, $file, $weight, $style);
+}
+
+@mixin geist-mono-font-face($file, $weight, $style: normal) {
+  @include font-face(GeistMono, $file, $weight, $style);
+}
+
+
+@font-face {
+  font-family: PixelArial14;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url("/fonts/PixelArial14/PixelArial14-Regular.woff") format("woff"),
+    url("/fonts/PixelArial14/PixelArial14-Regular.ttf") format("truetype");
+}
+
+@include geist-font-face(Geist-Light, 300);
+@include geist-font-face(Geist-Regular, 400);
+@include geist-font-face(Geist-Medium, 500);
+@include geist-font-face(Geist-Bold, 700);
+
+@include geist-mono-font-face(GeistMono-Regular, 400);
+
+
+// @include geist-font-face(Geist-Thin, 100);
+// @include geist-font-face(Geist-ExtraLight, 200);
+// @include geist-font-face(Geist-SemiBold, 600);
+// @include geist-font-face(Geist-ExtraBold, 800);
+// @include geist-font-face(Geist-Black, 900);
