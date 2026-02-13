@@ -1,0 +1,16 @@
+name = "r8e-website"
+compatibility_date = "2024-02-23"
+account_id = "ec96c85e8eae01bdf4c37e6ce90a7cce"
+
+[assets]
+directory = "./build"
+not_found_handling = "single-page-application"
+
+[env.staging]
+routes = [{ pattern = "staging.r8e.xyz", custom_domain = true }]
+
+[env.production]
+routes = [
+  { pattern = "r8e.xyz", custom_domain = true },
+  { pattern = "www.r8e.xyz", custom_domain = true },
+]
