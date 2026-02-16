@@ -1,8 +1,6 @@
 import HyperLink from '@/components/HyperLink'
-
-import { contactUsUrl, githubUrl, xUrl, legalName } from '../../../../constants/common'
-
 import { cn } from '@/helpers/lib'
+import { contactUsUrl, githubUrl, xUrl, legalName } from '@/constants/common'
 
 export interface Props {
   className?: string
@@ -10,38 +8,23 @@ export interface Props {
 
 export default function Footer({ className }: Props) {
   const classRoot = cn(
-    'small-container flex max-md:flex-col max-md:items-center justify-center max-md:gap-y-[48px] md:gap-x-[64px] py-6',
+    'small-container flex flex-col items-center justify-center gap-y-3 py-6',
     className
   )
 
-return (
-  <div className="flex items-center justify-between py-6">
-  <div className="flex items-center gap-x-[48px] whitespace-nowrap">
-    <HyperLink
-      href={xUrl}
-      text="X"
-      hyperTextProps={{ className: 'text-white' }}
-    />
+  return (
+    <div className={classRoot}>
+      {/* links row */}
+      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 whitespace-nowrap">
+        <HyperLink className="text-sm md:text-xl" href={xUrl} text="X" />
+        <HyperLink className="text-sm md:text-xl" href={githubUrl} text="Github" />
+        <HyperLink className="text-sm md:text-xl" href={contactUsUrl} text="Contact us" />
+      </div>
 
-    <HyperLink
-      href={githubUrl}
-      text="Github"
-      hyperTextProps={{ className: 'text-white' }}
-    />
-
-    <HyperLink
-      href={contactUsUrl}
-      text="Contact us"
-      hyperTextProps={{ className: 'text-white' }}
-    />
-  </div>
-
-  <span className="text-base font-normal text-white/70 whitespace-nowrap">
-    © 2026 Resilience.hk Limited
-  </span>
-</div>
-
-
-
-)
+      {/* legal name */}
+      <div className="text-center text-sm opacity-70">
+        © 2026 {legalName}
+      </div>
+    </div>
+  )
 }
