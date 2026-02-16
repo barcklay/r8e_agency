@@ -15,27 +15,23 @@ export default function Footer({ className }: Props) {
   )
 
 return (
-  <div className={classRoot}>
-    <div className="flex min-w-[180px] items-center justify-between">
-      <span>
-        <HyperLink className="min-w-[14px]" href={xUrl} text="X" />
-      </span>
-      {' / '}
-      <span>
-        <HyperLink className="min-w-[90px]" href={githubUrl} text="Github" />
-      </span>
-    </div>
+  <div className="flex items-center gap-x-[48px] md:gap-x-[64px] whitespace-nowrap">
+  <span>
+    <HyperLink className="min-w-[14px]" href={xUrl} text="X" />
+  </span>
 
-    <div>
-      <HyperLink className="min-w-[140px]" href={contactUsUrl} text="Contact us" />
-    </div>
+  <span>
+    <HyperLink className="min-w-[90px]" href={githubUrl} text="Github" />
+  </span>
 
-    <div
-      className="text-sm opacity-70 text-center md:text-left max-w-[260px] truncate"
-      title={legalName}
-    >
-      {legalName}
-    </div>
-  </div>
+  <span>
+    <HyperLink className="min-w-[140px]" href={contactUsUrl} text="Contact us" />
+  </span>
+
+  <span className="text-white/70 text-base">
+    {legalName}
+  </span>
+</div>
+
 )
 }
