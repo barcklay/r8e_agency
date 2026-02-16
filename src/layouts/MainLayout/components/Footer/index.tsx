@@ -23,7 +23,7 @@ export default function Footer({ className }: Props) {
 
       {/* legal name */}
       <div className="text-center text-sm opacity-70">
-        © 2026 {legalName}
+        {legalName}
       </div>
     </div>
   )
