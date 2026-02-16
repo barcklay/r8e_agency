@@ -1,6 +1,6 @@
 import HyperLink from '@/components/HyperLink'
 
-import { contactUsUrl, githubUrl, xUrl } from '@/constants/common'
+import { contactUsUrl, githubUrl, xUrl, legalName } from '@constants/common'
 import { cn } from '@/helpers/lib'
 
 export interface Props {
@@ -13,20 +13,28 @@ export default function Footer({ className }: Props) {
     className
   )
 
-  return (
-    <div className={classRoot}>
-      <div className="flex min-w-[180px] items-center justify-between">
-        <span>
-          ↳ <HyperLink className="min-w-[14px]" href={xUrl} text="X" />
-        </span>
-        {' / '}
-        <span>
-          ↳ <HyperLink className="min-w-[90px]" href={githubUrl} text="Github" />
-        </span>
-      </div>
-      <div>
-        ↳ <HyperLink className="min-w-[140px]" href={contactUsUrl} text="Contact us" />
-      </div>
+return (
+  <div className={classRoot}>
+    <div className="flex min-w-[180px] items-center justify-between">
+      <span>
+        <HyperLink className="min-w-[14px]" href={xUrl} text="X" />
+      </span>
+      {' / '}
+      <span>
+        <HyperLink className="min-w-[90px]" href={githubUrl} text="Github" />
+      </span>
     </div>
-  )
+
+    <div>
+      <HyperLink className="min-w-[140px]" href={contactUsUrl} text="Contact us" />
+    </div>
+
+    <div
+      className="text-sm opacity-70 text-center md:text-left max-w-[260px] truncate"
+      title={legalName}
+    >
+      {legalName}
+    </div>
+  </div>
+)
 }
