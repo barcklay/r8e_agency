@@ -38,6 +38,7 @@ export default ({ mode }) => {
         'ui': resolve(pathSrc, 'components/ui'),
         '@': pathSrc,
         '~': __dirname,
+        '@constants': resolve(pathSrc, 'constants'),
       },
     },
     define: {

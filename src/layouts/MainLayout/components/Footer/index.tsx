@@ -1,6 +1,7 @@
 import HyperLink from '@/components/HyperLink'
 
-import { contactUsUrl, githubUrl, xUrl, legalName } from '@constants/common'
+import { contactUsUrl, githubUrl, xUrl, legalName } from '../../../../constants/common'
+
 import { cn } from '@/helpers/lib'
 
 export interface Props {
