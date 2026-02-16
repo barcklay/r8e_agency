@@ -15,23 +15,33 @@ export default function Footer({ className }: Props) {
   )
 
 return (
-  <div className="flex items-center gap-x-[48px] md:gap-x-[64px] whitespace-nowrap">
-  <span>
-    <HyperLink className="min-w-[14px]" href={xUrl} text="X" />
-  </span>
+  <div className="flex items-center justify-between py-6">
+  <div className="flex items-center gap-x-[48px] whitespace-nowrap">
+    <HyperLink
+      href={xUrl}
+      text="X"
+      hyperTextProps={{ className: 'text-white' }}
+    />
 
-  <span>
-    <HyperLink className="min-w-[90px]" href={githubUrl} text="Github" />
-  </span>
+    <HyperLink
+      href={githubUrl}
+      text="Github"
+      hyperTextProps={{ className: 'text-white' }}
+    />
 
-  <span>
-    <HyperLink className="min-w-[140px]" href={contactUsUrl} text="Contact us" />
-  </span>
+    <HyperLink
+      href={contactUsUrl}
+      text="Contact us"
+      hyperTextProps={{ className: 'text-white' }}
+    />
+  </div>
 
-  <span className="text-white/70 text-base">
-    {legalName}
+  <span className="text-base font-normal text-white/70 whitespace-nowrap">
+    © 2026 Resilience.hk Limited
   </span>
 </div>
+
+
 
 )
 }
